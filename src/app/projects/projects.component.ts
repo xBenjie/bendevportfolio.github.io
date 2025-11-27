@@ -24,9 +24,9 @@ export class ProjectsComponent {
       title: 'E-Commerce Website',
       description:
         'A full-stack e-commerce platform with user authentication, shopping cart, and payment integration. Features include product catalog, order management, and admin dashboard.',
-      technologies: ['Angular', 'Node.js', 'MongoDB', 'Express', 'Stripe API'],
+      technologies: ['Angular'],
       imageUrl:
-        'https://via.placeholder.com/400x250/4f46e5/ffffff?text=E-Commerce+App',
+        'https://via.placeholder.com/400x250/2563eb/ffffff?text=E-Commerce+Site',
       githubUrl: 'https://github.com/username/ecommerce-app',
       liveUrl: 'https://my-ecommerce-demo.netlify.app',
     },
@@ -108,4 +108,10 @@ export class ProjectsComponent {
       githubUrl: 'https://github.com/username/fitness-tracker',
     },
   ];
+
+  onImageError(event: any) {
+    console.error('Image failed to load:', event.target.src);
+    // Set a fallback placeholder image
+    event.target.src = 'https://via.placeholder.com/400x250/6b7280/ffffff?text=Image+Not+Found';
+  }
 }

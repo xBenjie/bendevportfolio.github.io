@@ -1,33 +1,25 @@
 <div class="container">
   <div class="header-section">
-    <h2>Featured Work</h2>
+    <h2>My Featured Work</h2>
     <p class="section-description">
-      Here are some of the projects I've worked on recently. Each project
-      represents a unique challenge and learning experience.
+      Here are some of the projects I, Benjie Basa, have worked on recently. Each project
+      represents a unique challenge and learning experience in my journey as a frontend developer.
     </p>
   </div>
 
   <div class="projects-grid">
     <div class="project-card" *ngFor="let project of projects">
       <div class="card-image">
-        <img [src]="project.imageUrl" [alt]="project.title" loading="lazy" />
+        <img *ngIf="project.title !== 'E-Commerce Website'" [src]="project.imageUrl" [alt]="project.title"
+          loading="lazy" (error)="onImageError($event)" />
+        <img *ngIf="project.title === 'E-Commerce Website'" src="assets/images/projects/e-commerce.jpg"
+          [alt]="project.title" loading="lazy" />
         <div class="card-overlay">
           <div class="card-actions">
-            <a
-              [href]="project.githubUrl"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-secondary"
-            >
+            <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn btn-secondary">
               <i class="fab fa-github"></i> Code
             </a>
-            <a
-              *ngIf="project.liveUrl"
-              [href]="project.liveUrl"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-primary"
-            >
+            <a *ngIf="project.liveUrl" [href]="project.liveUrl" target="_blank" rel="noopener" class="btn btn-primary">
               <i class="fas fa-external-link-alt"></i> Live Demo
             </a>
           </div>
@@ -41,7 +33,7 @@
         <div class="technologies">
           <span class="tech-tag" *ngFor="let tech of project.technologies">{{
             tech
-          }}</span>
+            }}</span>
         </div>
       </div>
     </div>
