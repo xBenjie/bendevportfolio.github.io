@@ -26,8 +26,8 @@ export class ProjectsComponent {
         'A full-stack e-commerce platform with user authentication, shopping cart, and payment integration. Features include product catalog, order management, and admin dashboard.',
       technologies: ['Angular'],
       src: "assets/images/projects/e-commerce.jpg",
-      githubUrl: 'https://github.com/username/ecommerce-app',
-      liveUrl: 'https://my-ecommerce-demo.netlify.app',
+      githubUrl: 'https://github.com/xBenjie/e-commerce',
+      liveUrl: 'https://xbenjie.github.io/e-commerce/',
     },
     {
       id: 2,
