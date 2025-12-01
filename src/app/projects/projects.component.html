@@ -2,7 +2,7 @@
   <div class="header-section">
     <h2>My Featured Work</h2>
     <p class="section-description">
-      Here are some of the projects I, Benjie Basa, have worked on recently. Each project
+      Here are some of the projects I have worked on recently. Each project
       represents a unique challenge and learning experience in my journey as a frontend developer.
     </p>
   </div>
@@ -10,10 +10,7 @@
   <div class="projects-grid">
     <div class="project-card" *ngFor="let project of projects">
       <div class="card-image">
-        <img *ngIf="project.title !== 'E-Commerce Website'" [src]="project.imageUrl" [alt]="project.title"
-          loading="lazy" (error)="onImageError($event)" />
-        <img *ngIf="project.title === 'E-Commerce Website'" src="assets/images/projects/e-commerce.jpg"
-          [alt]="project.title" loading="lazy" />
+        <img [src]="project.src" [alt]="project.title" loading="lazy" (error)="onImageError($event)" />
         <div class="card-overlay">
           <div class="card-actions">
             <a [href]="project.githubUrl" target="_blank" rel="noopener" class="btn btn-secondary">

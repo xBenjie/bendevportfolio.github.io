@@ -6,7 +6,7 @@ interface Project {
   title: string;
   description: string;
   technologies: string[];
-  imageUrl: string;
+  src: string;
   githubUrl: string;
   liveUrl?: string;
 }
@@ -25,8 +25,7 @@ export class ProjectsComponent {
       description:
         'A full-stack e-commerce platform with user authentication, shopping cart, and payment integration. Features include product catalog, order management, and admin dashboard.',
       technologies: ['Angular'],
-      imageUrl:
-        'https://via.placeholder.com/400x250/2563eb/ffffff?text=E-Commerce+Site',
+      src: "assets/images/projects/e-commerce.jpg",
       githubUrl: 'https://github.com/username/ecommerce-app',
       liveUrl: 'https://my-ecommerce-demo.netlify.app',
     },
@@ -36,14 +35,10 @@ export class ProjectsComponent {
       description:
         'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features. Includes analytics and reporting.',
       technologies: [
-        'React',
-        'TypeScript',
-        'Firebase',
-        'Material-UI',
-        'Socket.io',
+        'React'
       ],
-      imageUrl:
-        'https://via.placeholder.com/400x250/059669/ffffff?text=Task+Manager',
+      src:
+        'assets/images/projects/task.jpg',
       githubUrl: 'https://github.com/username/task-manager',
       liveUrl: 'https://task-dashboard-demo.vercel.app',
     },
@@ -53,33 +48,12 @@ export class ProjectsComponent {
       description:
         'A responsive weather application that provides current weather conditions and 7-day forecasts. Features location-based weather, interactive maps, and weather alerts.',
       technologies: [
-        'Vue.js',
-        'JavaScript',
-        'OpenWeather API',
-        'Chart.js',
-        'PWA',
+        'Angular'
       ],
-      imageUrl:
-        'https://via.placeholder.com/400x250/dc2626/ffffff?text=Weather+App',
+      src:
+        'assets/images/projects/weather.jpg',
       githubUrl: 'https://github.com/username/weather-app',
       liveUrl: 'https://weather-forecast-pwa.netlify.app',
-    },
-    {
-      id: 4,
-      title: 'Portfolio Website',
-      description:
-        'A modern, responsive portfolio website showcasing projects and skills. Built with performance optimization, SEO best practices, and smooth animations.',
-      technologies: [
-        'Angular',
-        'TypeScript',
-        'SCSS',
-        'Angular Animations',
-        'PWA',
-      ],
-      imageUrl:
-        'https://via.placeholder.com/400x250/7c3aed/ffffff?text=Portfolio+Site',
-      githubUrl: 'https://github.com/username/portfolio',
-      liveUrl: 'https://my-portfolio.dev',
     },
     {
       id: 5,
@@ -87,7 +61,7 @@ export class ProjectsComponent {
       description:
         'A comprehensive social media analytics dashboard with data visualization, engagement metrics, and automated reporting features for multiple platforms.',
       technologies: ['Next.js', 'Python', 'Django', 'PostgreSQL', 'D3.js'],
-      imageUrl:
+      src:
         'https://via.placeholder.com/400x250/ea580c/ffffff?text=Social+Dashboard',
       githubUrl: 'https://github.com/username/social-dashboard',
     },
@@ -103,7 +77,7 @@ export class ProjectsComponent {
         'SQLite',
         'Health APIs',
       ],
-      imageUrl:
+      src:
         'https://via.placeholder.com/400x250/16a34a/ffffff?text=Fitness+Tracker',
       githubUrl: 'https://github.com/username/fitness-tracker',
     },
